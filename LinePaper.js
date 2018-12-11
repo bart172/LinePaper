@@ -18,33 +18,33 @@ function Circle() {
 	/* function to reset the all the values of a circle as soon as it hits a border */
   this.restart = function() {
 
-    if (this.x > width) {
-      this.x = 0;
-      this.y = random(width);
+    if (this.x > width+dis) {
+      this.x = -dis;
+      this.y = random(-dis, height+dis);
       this.dx = random(0, 2);
       this.dy = random(-2, 2);
       this.dim = random(2, 10);
     }
     
-    if (this.x < 0) {
-      this.x = width;
-      this.y = random(width);
+    if (this.x < -dis) {
+      this.x = width+dis;
+      this.y = random(-dis, height+dis);
       this.dx = random(-2, 0);
       this.dy = random(-2, 2);
       this.dim = random(2, 10);
     }
     
-    if (this.y > height) {
-      this.y = 0;
-      this.x = random(width);
+    if (this.y > height+dis) {
+      this.y = -dis;
+      this.x = random(-dis, width+dis);
       this.dx = random(-2, 2);
       this.dy = random(0, 2);
       this.dim = random(2, 10);
     }
     
-    if (this.y < 0) {
-      this.y = height;
-      this.x = random(width);
+    if (this.y < -dis) {
+      this.y = height+dis;
+      this.x = random(-dis, width+dis);
       this.dx = random(-2, 2);
       this.dy = random(-2, 0);
       this.dim = random(2, 10);
